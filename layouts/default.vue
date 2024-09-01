@@ -1,5 +1,6 @@
 <template>
-    <div>
-        <Navbar />
-    </div>
+  <div>
+    <Navbar class="z-10" />
+    <slot />
+  </div>
 </template>
