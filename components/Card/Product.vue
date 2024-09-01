@@ -16,14 +16,14 @@
             class="rounded-full border border-primary aspect-square w-[26px] flex justify-center items-center cursor-pointer"
             @click="$emit('remove')"
           >
-            <Icon name="ic:sharp-minus" />
+            <Icon name="lucide:minus" />
           </div>
           <div>0</div>
           <div
             class="rounded-full border bg-primary aspect-square w-[26px] flex justify-center items-center cursor-pointer"
             @click="$emit('add')"
           >
-            <Icon name="material-symbols:add-rounded" />
+            <Icon name="lucide:plus" />
           </div>
         </div>
       </div>

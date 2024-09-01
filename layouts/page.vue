@@ -8,7 +8,7 @@
           class=" flex justify-center items-center rounded-xl w-[42px] h-[42px]"
           @click="$emit('back')"
         >
-          <Icon name="ic:sharp-keyboard-backspace" size="24" />
+          <Icon name="lucide:arrow-left" size="24" />
         </button>
       </div>
       <div class="w-[70px] flex-1 flex justify-center h-12 items-center text-2xl font-bold">

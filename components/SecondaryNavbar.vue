@@ -6,14 +6,14 @@
     <div class="px-[55px] py-2.5 border rounded-[10px] relative">
       <input type="text" class="w-full" placeholder="Search your items here" />
       <Icon
-        name="ph:magnifying-glass-bold"
+        name="lucide:search"
         class="w-[21px] h-[21px] absolute top-[11px] left-4"
       />
     </div>
   </div>
   <div class="flex justify-between gap-2.5 h-[51px] sticky z-10 top-[56px] bg-white">
     <button class="bg-primary w-10 hidden sm:flex justify-center items-center">
-      <Icon name="material-symbols:chevron-left-rounded" size="32" />
+      <Icon name="lucide:chevron-left" size="32" />
     </button>
     <div class="flex-1 overflow-scroll no-scrollbar shadow-2xl">
       <div class="flex flex-nowrap">
@@ -30,7 +30,7 @@
       </div>
     </div>
     <button class="bg-primary w-10 hidden sm:flex justify-center items-center">
-      <Icon name="material-symbols:chevron-right-rounded" size="32" />
+      <Icon name="lucide:chevron-right" size="32" />
     </button>
   </div>
 </template>

@@ -17,7 +17,7 @@
           <div class="flex items-center">
             <div class="flex-1 my-2 mr-2 font-bold">Personal Info</div>
             <Icon
-              name="material-symbols:edit-square-outline"
+              name="lucide:square-pen"
               size="30"
               class="text-primary"
             />
@@ -26,7 +26,7 @@
             <div
               class="w-10 h-10 bg-gray-100 rounded-full flex justify-center items-center text-2xl text-primary"
             >
-              <Icon name="material-symbols:person-outline-rounded" size="20" />
+              <Icon name="lucide:user" size="20" />
             </div>
             <div>
               <p class="text-sm">Full Name</p>
@@ -37,7 +37,7 @@
             <div
               class="w-10 h-10 bg-gray-100 rounded-full flex justify-center items-center text-2xl text-primary"
             >
-              <Icon name="ion:mail-outline" size="20" />
+              <Icon name="lucide:mail" size="20" />
             </div>
             <div>
               <p class="text-sm">Email</p>
@@ -48,7 +48,7 @@
             <div
               class="w-10 h-10 bg-gray-100 rounded-full flex justify-center items-center text-2xl text-primary"
             >
-              <Icon name="ph:phone" size="20" />
+              <Icon name="lucide:phone" size="20" />
             </div>
             <div>
               <p class="text-sm">Phone</p>
@@ -63,7 +63,7 @@
         <div class="bg-white shadow-2xl rounded-lg py-2 px-4 flex items-center">
           <div class="flex-1 my-2 mr-2 font-bold">Change Password</div>
           <Icon
-            name="material-symbols:edit-square-outline"
+            name="lucide:square-pen"
             size="30"
             class="text-primary"
           />

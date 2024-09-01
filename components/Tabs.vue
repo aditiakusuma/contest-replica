@@ -17,14 +17,14 @@
 
 <script setup lang="ts">
 const tabs = [
-  { iconName: "solar:home-angle-2-outline", name: "home", link: "/" },
+  { iconName: "lucide:house", name: "home", link: "/" },
   {
-    iconName: "material-symbols:credit-score-outline-rounded",
+    iconName: "lucide:credit-card",
     name: "credits",
     link: "/credits",
   },
-  { iconName: "ri:shopping-cart-line", name: "cart", link: "/cart" },
-  { iconName: "solar:checklist-linear", name: "orders", link: "/orders" },
-  { iconName: "ion:person-outline", name: "Profile", link: "/profile" },
+  { iconName: "lucide:shopping-cart", name: "cart", link: "/cart" },
+  { iconName: "lucide:list-checks", name: "orders", link: "/orders" },
+  { iconName: "lucide:user", name: "Profile", link: "/profile" },
 ];
 </script>

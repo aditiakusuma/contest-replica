@@ -6,7 +6,7 @@
       <button
         class="border-primary border text-primary flex justify-center items-center rounded-xl w-[42px] h-[42px]"
       >
-        <Icon name="heroicons:bars-3-bottom-left-20-solid" size="24" />
+        <Icon name="lucide:text" size="24" />
       </button>
     </div>
     <div class="w-[70px] flex-1 flex justify-center h-12 items-center">
@@ -16,7 +16,7 @@
       <button
         class="border-primary border text-primary flex justify-center items-center rounded-xl w-[42px] h-[42px]"
       >
-        <Icon name="ri:shopping-cart-line" size="24" />
+        <Icon name="lucide:shopping-cart" size="24" />
       </button>
     </div>
   </nav>
