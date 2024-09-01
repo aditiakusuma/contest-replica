@@ -20,4 +20,8 @@
 
 <script setup lang="ts">
 const products = useProducts()
+
+definePageMeta({
+  layout: 'app'
+})
 </script>
