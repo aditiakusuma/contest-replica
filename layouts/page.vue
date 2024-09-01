@@ -19,6 +19,7 @@
       </div>
     </nav>
     <slot />
+    <Tabs />
   </div>
 </template>
 
