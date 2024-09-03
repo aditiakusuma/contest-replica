@@ -5,12 +5,18 @@
     <div class="w-[70px] flex justify-center h-12 items-center">
       <button
         class="border-primary border text-primary flex justify-center items-center rounded-xl w-[42px] h-[42px]"
+        @click="$emit('menuOpen')"
       >
         <Icon name="lucide:text" size="24" />
       </button>
     </div>
     <div class="w-[70px] flex-1 flex justify-center h-12 items-center">
-        <img src="https://system.dilanatandoor.com.my/theme/assets/images/mylogo.png" height="45" width="173" alt="">
+      <img
+        src="https://system.dilanatandoor.com.my/theme/assets/images/mylogo.png"
+        height="45"
+        width="173"
+        alt=""
+      />
     </div>
     <div class="w-[70px] flex justify-center h-12 items-center">
       <button
@@ -21,3 +27,7 @@
     </div>
   </nav>
 </template>
+
+<script setup lang="ts">
+defineEmits(["menuOpen"]);
+</script>
