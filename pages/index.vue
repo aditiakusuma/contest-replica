@@ -7,11 +7,21 @@
         class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 w-full gap-3 p-4"
       >
         <CardProduct
-          v-for="({ name, price, image_url }, index) in items"
-          :key="index"
+          v-for="({ name, price, image_url, product_id: id }) in items"
+          :key="id"
           :image-url="image_url"
           :name="name"
           :price="price"
+          :id="Number(id)"
+          @add="
+            addProduct({
+              id: Number(id),
+              name,
+              price,
+              imageUrl: image_url,
+            })
+          "
+          @remove="removeProduct(Number(id))"
         />
       </div>
     </div>
@@ -19,9 +29,11 @@
 </template>
 
 <script setup lang="ts">
-const products = useProducts()
+const products = useProducts();
+
+const { addProduct, removeProduct } = useCart();
 
 definePageMeta({
-  layout: 'app'
-})
+  layout: "app",
+});
 </script>

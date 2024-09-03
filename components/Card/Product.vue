@@ -18,7 +18,7 @@
           >
             <Icon name="lucide:minus" />
           </div>
-          <div>0</div>
+          <div>{{ totalProductInCart }}</div>
           <div
             class="rounded-full border bg-primary aspect-square w-[26px] flex justify-center items-center cursor-pointer"
             @click="$emit('add')"
@@ -32,11 +32,17 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{
-  imageUrl: string;
-  name: string;
+const props = defineProps<{
+  id: number;
   price: string;
+  name: string;
+  imageUrl: string;
 }>();
+const { cart } = useCart();
+
+const totalProductInCart = computed(
+  () => cart.value.filter((product: any) => props.id === product.id).length
+);
 
 defineEmits(["add", "remove"]);
 </script>
