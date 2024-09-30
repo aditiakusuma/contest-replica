@@ -1,5 +1,5 @@
 <template>
-  <NuxtLayout name="page" title="Cart" @back="() => console.log('back')">
+  <NuxtLayout name="page" title="Cart" @back="$router.back()">
     <template #icon-right>
       <Icon name="lucide:trash-2" size="32" class="cursor-pointer" />
     </template>
