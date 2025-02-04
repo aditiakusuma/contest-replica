@@ -17,7 +17,7 @@
     </button>
     <div class="flex-1 overflow-scroll no-scrollbar shadow-2xl">
       <div class="flex flex-nowrap">
-        <div
+        <a :href="`#${category}`"
           v-for="(category, index) in categories"
           :key="index"
           class="h-[46px] m-[5px] mb-0 font-bold capitalize relative first:text-primary group"
@@ -26,7 +26,7 @@
             {{ category }}
           </div>
           <div class="absolute bottom-0 inset-x-0 h-1 group-first:bg-primary"></div>
-        </div>
+        </a>
       </div>
     </div>
     <button class="bg-primary w-10 hidden sm:flex justify-center items-center">
