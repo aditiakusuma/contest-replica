@@ -20,7 +20,7 @@
     <div class="flex-1 overflow-scroll no-scrollbar shadow-2xl">
       <div class="flex flex-nowrap">
         <a
-          :href="`#${category}`"
+          :href="`#${category.split(' & ').join('_and_')}`"
           v-for="(category, index) in categories"
           :key="index"
           class="h-[46px] m-[5px] mb-0 font-bold capitalize relative group"

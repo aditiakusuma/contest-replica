@@ -2,7 +2,7 @@
   <SecondaryNavbar :categories="Object.keys(products)" />
   <div class="py-4">
     <div v-for="(items, name, index) in products" :key="index" class="mb-4">
-      <div :id="name" class="font-bold px-6" style="scroll-margin: 123px;">{{ name }}</div>
+      <div :id="name.split(' & ').join('_and_')" class="font-bold px-6" style="scroll-margin: 123px;">{{ name }}</div>
       <div
         class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 w-full gap-3 p-4"
       >
