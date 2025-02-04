@@ -11,21 +11,29 @@
       />
     </div>
   </div>
-  <div class="flex justify-between gap-2.5 h-[51px] sticky z-10 top-[56px] bg-white">
+  <div
+    class="flex justify-between gap-2.5 h-[51px] sticky z-10 top-[56px] bg-white"
+  >
     <button class="bg-primary w-10 hidden sm:flex justify-center items-center">
       <Icon name="lucide:chevron-left" size="32" />
     </button>
     <div class="flex-1 overflow-scroll no-scrollbar shadow-2xl">
       <div class="flex flex-nowrap">
-        <a :href="`#${category}`"
+        <a
+          :href="`#${category}`"
           v-for="(category, index) in categories"
           :key="index"
-          class="h-[46px] m-[5px] mb-0 font-bold capitalize relative first:text-primary group"
+          class="h-[46px] m-[5px] mb-0 font-bold capitalize relative group"
+          :class="selectedCategory === category ? 'text-primary' : ''"
+          @click="selectCategory(category)"
         >
-          <div class="my-3 px-3 text-center tracking-normal text-nowrap ">
+          <div class="my-3 px-3 text-center tracking-normal text-nowrap">
             {{ category }}
           </div>
-          <div class="absolute bottom-0 inset-x-0 h-1 group-first:bg-primary"></div>
+          <div
+            :class="selectedCategory === category ? 'bg-primary' : ''"
+            class="absolute bottom-0 inset-x-0 h-1"
+          ></div>
         </a>
       </div>
     </div>
@@ -36,7 +44,13 @@
 </template>
 
 <script setup lang="ts">
-defineProps<{ categories: string[] }>();
+const props = defineProps<{ categories: string[] }>();
+
+const selectedCategory = ref(props.categories[0]);
+
+const selectCategory = (category: string) => {
+  selectedCategory.value = category;
+};
 </script>
 
 <style scoped>
