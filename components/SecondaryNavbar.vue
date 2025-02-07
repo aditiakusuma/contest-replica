@@ -14,11 +14,14 @@
   <div
     class="flex justify-between gap-2.5 h-[51px] sticky z-10 top-[56px] bg-white"
   >
-    <button class="bg-primary w-10 hidden sm:flex justify-center items-center">
+    <button
+      class="bg-primary w-10 hidden sm:flex justify-center items-center"
+      @click="scrollLeft()"
+    >
       <Icon name="lucide:chevron-left" size="32" />
     </button>
-    <div class="flex-1 overflow-scroll no-scrollbar shadow-2xl">
-      <div class="flex flex-nowrap">
+    <div id="container" class="flex-1 overflow-scroll no-scrollbar shadow-2xl">
+      <div id="nav" class="flex flex-nowrap">
         <a
           :href="`#${category.split(' & ').join('_and_')}`"
           v-for="(category, index) in categories"
@@ -37,7 +40,7 @@
         </a>
       </div>
     </div>
-    <button class="bg-primary w-10 hidden sm:flex justify-center items-center">
+    <button class="bg-primary w-10 hidden sm:flex justify-center items-center" @click="scrollRight">
       <Icon name="lucide:chevron-right" size="32" />
     </button>
   </div>
@@ -50,6 +53,16 @@ const selectedCategory = ref(props.categories[0]);
 
 const selectCategory = (category: string) => {
   selectedCategory.value = category;
+};
+
+const scrollLeft = () => {
+  const container = document.getElementById("container")
+  if (container) container.scrollBy({ left: -200, behavior: 'smooth' });
+};
+
+const scrollRight = () => {
+  const container = document.getElementById("container")
+  if (container) container.scrollBy({ left: 200, behavior: 'smooth' });
 };
 </script>
 
